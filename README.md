@@ -1,5 +1,5 @@
 
-[show-more-less.pdf](https://github.com/Mahdi-Khorshidi-26/SPAs-React-Collapsing-Text/files/14067132/show-more-less.pdf)
+![show-moreORless](https://github.com/Mahdi-Khorshidi-26/SPAs-React-Collapsing-Text/assets/150541211/434dcc9a-4623-422d-8549-b7276b8b3e70)
 
 
 # Getting Started with Create React App
