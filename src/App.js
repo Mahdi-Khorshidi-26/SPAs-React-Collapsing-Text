@@ -1,25 +1,80 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+const box = {
+  fontSize: "18px",
+  color: "#333",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  background: "lightgray",
+  padding: "20px",
+  margin: "10px",
+  borderRadius: "10px",
+};
+
+export default function CollapseText() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={box}>
+      <Text>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+        tempore veniam est quidem incidunt ea ipsa ut, quo pariatur, at tempora
+        animi voluptates itaque consequuntur vel fuga fugiat eius placeat.
+        Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo pariatur,
+        at tempora animi voluptates itaque consequuntur vel fuga fugiat eius
+        placeat. Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo
+        pariatur, at tempora animi voluptates itaque consequuntur vel fuga
+        fugiat eius placeat. Accusamus tempore veniam est quidem incidunt ea
+        ipsa ut, quo pariatur, at tempora animi voluptates itaque consequuntur
+        vel fuga fugiat eius placeat.
+      </Text>
+      <br />
+      <br />
+      <br />
+      <Text>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+        tempore veniam est quidem incidunt ea ipsa ut, quo pariatur, at tempora
+        animi voluptates itaque consequuntur vel fuga fugiat eius placeat.
+        Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo pariatur,
+        at tempora animi voluptates itaque consequuntur vel fuga fugiat eius
+        placeat. Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo
+        pariatur, at tempora animi voluptates itaque consequuntur vel fuga
+        fugiat eius placeat. Accusamus tempore veniam est quidem incidunt ea
+        ipsa ut, quo pariatur, at tempora animi voluptates itaque consequuntur
+        vel fuga fugiat eius placeat.
+      </Text>
+      <br />
+      <br />
+      <br />
+      <Text>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+        tempore veniam est quidem incidunt ea ipsa ut, quo pariatur, at tempora
+        animi voluptates itaque consequuntur vel fuga fugiat eius placeat.
+        Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo pariatur,
+        at tempora animi voluptates itaque consequuntur vel fuga fugiat eius
+        placeat. Accusamus tempore veniam est quidem incidunt ea ipsa ut, quo
+        pariatur, at tempora animi voluptates itaque consequuntur vel fuga
+        fugiat eius placeat. Accusamus tempore veniam est quidem incidunt ea
+        ipsa ut, quo pariatur, at tempora animi voluptates itaque consequuntur
+        vel fuga fugiat eius placeat.
+      </Text>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
 
-export default App;
+function Text({ children, collapseNum = 30 }) {
+  const [isExpanded, setIsExpanded] = useState(true);
+  let displayText = isExpanded
+    ? children.split(" ").slice(0, collapseNum).join(" ") + "..."
+    : children;
+  return (
+    <div>
+      {displayText}
+      <button onClick={() => setIsExpanded((e) => !e)}>
+        {isExpanded ? "Show More" : "Show Less"}
+      </button>
+    </div>
+  );
+}
