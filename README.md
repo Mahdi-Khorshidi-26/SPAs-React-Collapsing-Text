@@ -1,3 +1,7 @@
+
+[show-more-less.pdf](https://github.com/Mahdi-Khorshidi-26/SPAs-React-Collapsing-Text/files/14067132/show-more-less.pdf)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
